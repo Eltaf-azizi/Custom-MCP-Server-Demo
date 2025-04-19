@@ -46,3 +46,20 @@ def read_notes() -> str:
         content = f.read().strip()
 
     return content or "No notes yet."
+
+
+
+@mcp.resource("notes://latest")
+def get_latest_note() -> str:
+    """
+    Get the most recently added note from the sticky note file.
+
+    Returns:
+        str: The last note entry. If no notes exist, a default message is returned.
+    """
+    ensure_file()
+    with open(NOTES_FILE, "r") as f:
+        lines = f.readline()
+
+    return lines[-1].strip() if lines else "No notes yet."
+
