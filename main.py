@@ -63,3 +63,21 @@ def get_latest_note() -> str:
 
     return lines[-1].strip() if lines else "No notes yet."
 
+
+@mcp.prompt()
+def note_summary_prompt() -> str:
+    """
+    Generate a prompt asking the AI to summarize all current notes.
+
+    Returns:
+        str: A prompt string that includes all notes and asks for a summary.
+        If no notes exist, a message will be shown indicating that.
+    """
+    ensure_file()
+    with open(NOTES_FILE, "r") as f:
+        content = f.read().strip()
+
+    if not content:
+        return "There are no notes yet."
+
+    return f"Summarize the current notes: {content}"
