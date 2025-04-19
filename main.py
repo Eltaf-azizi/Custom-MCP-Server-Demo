@@ -1,19 +1,22 @@
 # server.py
 from mcp.server.fastmcp import FastMCP
+import os
 
 # Create an MCP server
-mcp = FastMCP("Demo")
+mcp = FastMCP("AI Sticky Notes")
+
+NOTES_FILE = "notes.txt"
 
 
-# Add an addition tool
+def ensure_file():
+    if not os.path.exists(NOTES_FILE):
+        with open(NOTES_FILE, "w") as f:
+            f.write("")
+
+
 @mcp.tool()
-def add(a: int, b: int) -> int:
-    """Add two numbers"""
-    return a + b
-
-
-# Add a dynamic greeting resource
-@mcp.resource("greeting://{name}")
-def get_greeting(name: str) -> str:
-    """Get a personalized greeting"""
-    return f"Hello, {name}!"
+def add_note(message: str) -> str:
+    ensure_file()
+    with open(NOTES_FILE, "a") as f:
+        f.write(message + "\n")
+    return "Note Saved!"
