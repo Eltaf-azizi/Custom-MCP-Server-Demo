@@ -68,3 +68,17 @@ Example message structure (as JSON over TCP):
          "data": "Hello, world!"
     }
 The server parses these messages and responds accordingly, making it easy to handle multiple types of client interactions in a clean and scalable way.
+
+
+## 📚 Resources
+
+Tech With Tim - Build Anything With a Custom MCP Server(https://www.youtube.com/watch?v=-8k9lGpGQ6g)
+
+Python Socket Programming Docs(https://docs.python.org/3/library/socket.html)
+
+## 🤝 Contributing
+You can fix this project, improve it, or build something entirely new on top of it. PRs are welcome!
+
+<h3 align="center">Happy Coding!</h3>
+
+
