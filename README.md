@@ -6,12 +6,34 @@ This project is a Custom MCP (Model Context Protocol) Server built using Python,
 ## 📌 What is this project about?
 This project helps you understand how to:
 
-Build a custom server using Python's socket library
+ - Build a custom server using Python's socket library
 
-Implement a custom protocol (MCP) to handle communication between clients and the server
+ - Implement a custom protocol (MCP) to handle communication between clients and the server
 
-Manage client connections and message handling in a structured way
+ - Manage client connections and message handling in a structured way
 
-Send and receive custom commands and data with context-aware processing
+ - Send and receive custom commands and data with context-aware processing
 
-It serves as a learning base for creating more complex client-server systems, such as multiplayer games, chat applications, or custom networked tools.
+It is a learning base for creating more complex client-server systems, such as multiplayer games, chat applications, or custom networked tools.
+
+## 🚀 Features
+
+ - 🌐 TCP-based custom server built in Python
+
+ - 🔄 Model Context Protocol: structured message handling
+
+ - 📡 Real-time communication between client and server
+
+ - 🧩 Easy to extend with new message types or functionalities
+
+ - 🧪 Great for learning networking, protocol design, and server architecture
+
+
+## 🔧 Requirements
+
+ - Python 3.8+
+
+ - Basic understanding of networking (sockets, TCP)
+
+ - No external dependencies required
+
