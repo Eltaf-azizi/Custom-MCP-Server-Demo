@@ -42,7 +42,7 @@ It is a learning base for creating more complex client-server systems, such as m
 
 1. Clone the repository:
 
-       git clone 
+       git clone https://github.com/Eltaf-azizi/Custom-MCP-Server-Demo.git
        cd custom-mcp-server
    
 3. Run the server:
@@ -50,3 +50,21 @@ It is a learning base for creating more complex client-server systems, such as m
        python server.py
 
 
+## 💡 How the Protocol Works (MCP)
+
+The Model Context Protocol is a custom-defined protocol where each message includes:
+
+1. A model: What kind of data is being sent (e.g., "chat", "move", "state")
+
+2. A context: Additional metadata to help interpret the model
+
+3. The data: The actual payload/message
+
+Example message structure (as JSON over TCP):
+
+    {
+         "model": "chat",
+         "context": "user",
+         "data": "Hello, world!"
+    }
+The server parses these messages and responds accordingly, making it easy to handle multiple types of client interactions in a clean and scalable way.
