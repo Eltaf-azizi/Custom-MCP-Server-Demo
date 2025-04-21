@@ -37,3 +37,16 @@ It is a learning base for creating more complex client-server systems, such as m
 
  - No external dependencies required
 
+
+## 🛠 How to Run
+
+1. Clone the repository:
+
+       git clone 
+       cd custom-mcp-server
+   
+3. Run the server:
+
+       python server.py
+
+
